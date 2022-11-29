@@ -1,14 +1,22 @@
 package main
 
-import "Go_Learning/.idea/go_learning_basic/function_9/utils"
+// alias for the library name
+import (
+	u "Go_Learning/.idea/go_learning_basic/function_9/utils"
+	"fmt"
+)
+
+func init() {
+	fmt.Println("Keep this in mind, I(init) will be executed before main, you could use me for initialization works")
+}
 
 func main() {
-	utils.Calculate(1.1, 2.2, '+')
+	u.Calculate(u.N1, u.N2, '+')
 
-	utils.Calculate(1.1, 2.2, '-')
+	u.Calculate(u.N1, u.N2, '-')
 
-	utils.Calculate(1.1, 2.2, '*')
+	u.Calculate(u.N1, u.N2, '*')
 
-	utils.Calculate(1.1, 2.2, '/')
+	u.Calculate(u.N1, u.N2, '/')
 
 }
